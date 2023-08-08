@@ -14,8 +14,6 @@ import com.google.android.material.button.MaterialButton;
 
 public class SecondActivity extends AppCompatActivity {
 
-    EditText et;
-    String st;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +41,13 @@ public class SecondActivity extends AppCompatActivity {
 
     }
     private void openThirdActivity() {
+        EditText nameEditText = findViewById(R.id.name);
+        EditText nicknameEditText = findViewById(R.id.nickname);
+        String enteredName = nameEditText.getText().toString();
+        String enteredNickname = nicknameEditText.getText().toString();
         Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+        intent.putExtra("name", enteredName);
+        intent.putExtra("nickname", enteredNickname);
         startActivity(intent);
     }
 }

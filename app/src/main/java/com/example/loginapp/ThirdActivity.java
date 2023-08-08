@@ -23,6 +23,23 @@ public class ThirdActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_third);
 
+        String passedName = getIntent().getStringExtra("name");
+        String passedNickname = getIntent().getStringExtra("nickname");
+
+        TextView fullNameTextView = findViewById(R.id.fullname);
+        TextView nicknameTextView = findViewById(R.id.nickname);
+
+        if (passedName != null && !passedName.isEmpty()) {
+            fullNameTextView.setText(passedName);
+        } else {
+            fullNameTextView.setText("No name provided");
+        }
+
+        if (passedNickname != null && !passedNickname.isEmpty()) {
+            nicknameTextView.setText(passedNickname);
+        } else {
+            nicknameTextView.setText("No nickname provided");
+        }
 
         MaterialButton loveBtn = (MaterialButton) findViewById(R.id.loveBtn);
 
