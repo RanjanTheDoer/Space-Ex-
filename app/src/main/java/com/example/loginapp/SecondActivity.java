@@ -14,28 +14,30 @@ import com.google.android.material.button.MaterialButton;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private EditText Name , Nickname ;
-    private String name;
-
+    EditText et;
+    String st;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_second);
 
-        TextView name = findViewById(R.id.name);
-        TextView nickname = findViewById(R.id.nickname);
+
 
         MaterialButton saveBtn = (MaterialButton) findViewById(R.id.saveBtn);
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+
                 Toast.makeText(SecondActivity.this, "launching ...", Toast.LENGTH_SHORT).show();
                 openThirdActivity();
+
+
             }
         });
 

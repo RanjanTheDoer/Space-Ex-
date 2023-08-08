@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
+
+import java.util.jar.Attributes;
 
 public class ThirdActivity extends AppCompatActivity {
 
@@ -18,8 +21,8 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_third);
+
 
         MaterialButton loveBtn = (MaterialButton) findViewById(R.id.loveBtn);
 

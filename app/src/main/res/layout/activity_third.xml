@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:text="Name"
         android:textSize="30dp"
+        android:id="@+id/fullname"
         android:textColor="@color/white"
         android:layout_marginTop="300dp"
         android:layout_centerHorizontal="true"/>
